@@ -7,4 +7,4 @@ With this API you can do the following:
 - Submit assignments
 - Grade submitted assignments
 - Do the attendence 
-- For all of the above features CRUD operations are available using the corresponding endpoints.
+- For all of the above features, CRUD operations are available using the corresponding endpoints.
