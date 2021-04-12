@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "f8702fc9-4fe0-4da0-b5d9-972cbe18d9aa",
+		"name": "LaboratoryTrackingAPIStudentRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create student",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"test\",\r\n    \"fullName\": \"Andrei\",\r\n    \"token\": \"fWkh9OkIE4nxnpfvANRTnPiJU3u1Cz5jS4o1sThWj9qopkuFWskAz1eOqw64mc76MNxolCyAKhAn15UwcWNqyGenH7MhQMVzc0A17foRnWS7Jgxqvj9iNaTrIiT8zB6P\",\r\n    \"groupID\": 4,\r\n    \"hobby\": \"Imi place sa ma inregistrez\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all students",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "andreiavram99@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/student/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit student hobby",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/student/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

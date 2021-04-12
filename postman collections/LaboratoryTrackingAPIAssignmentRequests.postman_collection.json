@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "a6622904-d3e9-4a4f-9a70-5e9df55a8b6b",
+		"name": "LaboratoryTrackingAPIAssignmentRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all assignments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "andreiavram99@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/assignment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"assignment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create assignment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "andreiavram99@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Primul assignment\",\r\n    \"deadline\" : \"2022-09-04\",\r\n    \"description\" : \"Testez\",\r\n    \"laboratoryClassId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/assignment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"assignment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete assignment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/assignment/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"assignment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit assignment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Primul assignment Editat\",\r\n        \"deadline\": \"2021-09-04\",\r\n        \"description\": \"Testez\",\r\n        \"laboratoryClassId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/assignment/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"assignment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get assignment by lab id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test@test.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/assignment/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"assignment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

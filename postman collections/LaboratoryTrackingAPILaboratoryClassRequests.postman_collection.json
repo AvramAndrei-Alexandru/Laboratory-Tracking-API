@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "eb6818bd-9082-48da-85cf-8ad1c780cf63",
+		"name": "LaboratoryTrackingAPILaboratoryClassRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all labs",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test@test.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/laboratory-class",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"laboratory-class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new laboratory",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "andreiavram99@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"laboratoryNumber\" : 1,\r\n    \"date\" : \"2021-12-02\",\r\n    \"curricula\": \"Spring security\",\r\n    \"description\": \"In this lab we will learn about spring security\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/laboratory-class",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"laboratory-class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit laboratory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"laboratoryNumber\" : 1,\r\n    \"date\" : \"2021-12-02\",\r\n    \"curricula\": \"Spring security new version\",\r\n    \"description\": \"In this lab we will learn about spring security\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/laboratory-class/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"laboratory-class",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete laboratory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/laboratory-class/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"laboratory-class",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
